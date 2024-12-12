@@ -3,6 +3,18 @@
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
+@font-face {
+  font-family: 'HarmoniaBold';
+  src: url('/assets/fonts/HarmoniaSansW01-Bold.woff'),
+  url('/assets/fonts/HarmoniaSansW01-Bold.woff2')
+  // url('assets/fonts/Harmonia/Sans/W01/Bold.otf');
+}
+@font-face {
+  font-family: 'HarmoniaRegular';
+  src: url('/assets/fonts/HarmoniaSansW01-Regular.woff'),
+  url('/assets/fonts/HarmoniaSansW01-Regular.woff2')
+  // url('assets/fonts/Harmonia/Sans/W01/Bold.otf');
+}
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -28,6 +40,8 @@ $bullpadelclub-theme: mat.define-light-theme((
   )
 ));
 
+
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
@@ -36,4 +50,4 @@ $bullpadelclub-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'HarmoniaRegular', sans-serif; }
