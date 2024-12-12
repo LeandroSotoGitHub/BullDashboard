@@ -1,0 +1,53 @@
+<mat-nav-list>
+    <a
+      routerLink="home"
+      routerLinkActive
+      #homeLink="routerLinkActive"
+      [activated]="homeLink.isActive"
+      mat-list-item>
+      <mat-icon matListItemIcon>home</mat-icon>
+      Inicio
+    </a>
+    <!-- <a
+      routerLink="students"
+      routerLinkActive
+      #studentsLink="routerLinkActive"
+      [activated]="studentsLink.isActive"
+      mat-list-item>
+      <mat-icon matListItemIcon>assignment_ind</mat-icon>
+      Alumnos
+    </a>
+    <a
+      routerLink="courses"
+      routerLinkActive
+      #coursesLink="routerLinkActive"
+      [activated]="coursesLink.isActive"
+      mat-list-item>
+      <mat-icon matListItemIcon>import_contacts</mat-icon>
+      Cursos
+    </a>
+    <a
+      routerLink="classes"
+      routerLinkActive
+      #clasesLink="routerLinkActive"
+      [activated]="clasesLink.isActive"
+      mat-list-item>
+      <mat-icon matListItemIcon>school</mat-icon>
+      Clases
+    </a>
+    <a
+      routerLink="enrollments"
+      routerLinkActive
+      #enrollmentLink="routerLinkActive"
+      [activated]="enrollmentLink.isActive"
+      mat-list-item>
+      <mat-icon matListItemIcon>how_to_reg</mat-icon>
+      Inscripción
+    </a>
+    <a
+      (click)="logout()"
+      mat-list-item>
+      <mat-icon matListItemIcon>logout</mat-icon>
+      Cerrar sesión
+    </a> -->
+</mat-nav-list>
