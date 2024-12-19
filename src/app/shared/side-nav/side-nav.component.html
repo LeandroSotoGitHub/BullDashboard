@@ -5,37 +5,37 @@
       #homeLink="routerLinkActive"
       [activated]="homeLink.isActive"
       mat-list-item>
-      <mat-icon matListItemIcon>home</mat-icon>
+      <!-- <mat-icon matListItemIcon>home</mat-icon> -->
       Inicio
     </a>
+    <a
+      routerLink="sales"
+      routerLinkActive
+      #sales="routerLinkActive"
+      [activated]="sales.isActive"
+      mat-list-item>
+      <!-- <mat-icon matListItemIcon>assignment_ind</mat-icon> -->
+      Ventas
+    </a>
+    <a 
+      routerLink="medial-content"
+      routerLinkActive
+      #medialcontent="routerLinkActive"
+      [activated]="medialcontent.isActive"
+      mat-list-item>
+      <!-- <mat-icon matListItemIcon>import_contacts</mat-icon> -->
+      Material para redes
+    </a>
+    <a
+      routerLink="buy"
+      routerLinkActive
+      #buyLink="routerLinkActive"
+      [activated]="buyLink.isActive"
+      mat-list-item>
+      <!-- <mat-icon matListItemIcon>school</mat-icon> -->
+      Compras
+    </a>
     <!-- <a
-      routerLink="students"
-      routerLinkActive
-      #studentsLink="routerLinkActive"
-      [activated]="studentsLink.isActive"
-      mat-list-item>
-      <mat-icon matListItemIcon>assignment_ind</mat-icon>
-      Alumnos
-    </a>
-    <a
-      routerLink="courses"
-      routerLinkActive
-      #coursesLink="routerLinkActive"
-      [activated]="coursesLink.isActive"
-      mat-list-item>
-      <mat-icon matListItemIcon>import_contacts</mat-icon>
-      Cursos
-    </a>
-    <a
-      routerLink="classes"
-      routerLinkActive
-      #clasesLink="routerLinkActive"
-      [activated]="clasesLink.isActive"
-      mat-list-item>
-      <mat-icon matListItemIcon>school</mat-icon>
-      Clases
-    </a>
-    <a
       routerLink="enrollments"
       routerLinkActive
       #enrollmentLink="routerLinkActive"
@@ -43,11 +43,10 @@
       mat-list-item>
       <mat-icon matListItemIcon>how_to_reg</mat-icon>
       Inscripción
-    </a>
-    <a
-      (click)="logout()"
-      mat-list-item>
-      <mat-icon matListItemIcon>logout</mat-icon>
-      Cerrar sesión
     </a> -->
+    <a
+      mat-list-item>
+      <!-- <mat-icon matListItemIcon>logout</mat-icon> -->
+      Cerrar sesión
+    </a> 
 </mat-nav-list>

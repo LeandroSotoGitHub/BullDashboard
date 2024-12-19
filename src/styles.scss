@@ -1,37 +1,89 @@
-
+@use '@angular/material' as mat;
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
+
+// Importación de fuentes
 @font-face {
   font-family: 'HarmoniaBold';
   src: url('/assets/fonts/HarmoniaSansW01-Bold.woff'),
-  url('/assets/fonts/HarmoniaSansW01-Bold.woff2')
-  // url('assets/fonts/Harmonia/Sans/W01/Bold.otf');
+       url('/assets/fonts/HarmoniaSansW01-Bold.woff2');
 }
+
 @font-face {
   font-family: 'HarmoniaRegular';
   src: url('/assets/fonts/HarmoniaSansW01-Regular.woff'),
-  url('/assets/fonts/HarmoniaSansW01-Regular.woff2')
-  // url('assets/fonts/Harmonia/Sans/W01/Bold.otf');
+       url('/assets/fonts/HarmoniaSansW01-Regular.woff2');
 }
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$bullpadelclub-primary: mat.define-palette(mat.$indigo-palette);
-$bullpadelclub-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// Definición de la variable $black-87-opacity
+$black-87-opacity: rgba(0, 0, 0, 0.87);
 
-// The warn palette is optional (defaults to red).
+$bullpadelclub-primary: mat.define-palette(
+  (
+    50: #FCE7EB,
+    100: #F7C2CC,
+    200: #F19BAA,
+    300: #EB7488,
+    400: #E74F6D,
+    500: #C8102E,
+    600: #B30E2A,
+    700: #9D0C25,
+    800: #870921,
+    900: #71071D,
+    A100: #FFB2BC,
+    A200: #FF8294,
+    A400: #FF516C,
+    A700: #FF3756,
+    contrast: (
+      50: $black-87-opacity,
+      100: $black-87-opacity,
+      200: $black-87-opacity,
+      300: $black-87-opacity,
+      400: $black-87-opacity,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: $black-87-opacity,
+      A200: white,
+      A400: white,
+      A700: white,
+    )
+  )
+);
+
+$bullpadelclub-accent: mat.define-palette(
+  (
+    50: #f9f9f9,
+    100: #f0f0f0,
+    200: #e0e0e0,
+    300: #cfcfcf,
+    400: #bfbfbf,
+    500: #505050,
+    600: #4a4a4a,
+    700: #444444,
+    800: #3e3e3e,
+    900: #333333,
+    contrast: (
+      50: $black-87-opacity,
+      100: $black-87-opacity,
+      200: $black-87-opacity,
+      300: $black-87-opacity,
+      400: $black-87-opacity,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+    )
+  )
+);
+
 $bullpadelclub-warn: mat.define-palette(mat.$red-palette);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
 $bullpadelclub-theme: mat.define-light-theme((
   color: (
     primary: $bullpadelclub-primary,
@@ -40,14 +92,27 @@ $bullpadelclub-theme: mat.define-light-theme((
   )
 ));
 
-
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include mat.all-component-themes($bullpadelclub-theme);
 
-/* You can add global styles to this file, and also import other style files */
+/* Estilos globales */
+html, body {
+  height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: 'HarmoniaRegular', sans-serif; }
+body {
+  margin: 0;
+  font-family: 'HarmoniaRegular', sans-serif;
+}
+mat-nav-list span {
+  color: #fff !important;
+  text-decoration: none;
+  font-family: "HarmoniaBold";
+}
+
+mat-nav-list mat-icon {
+  color: #fff !important;
+}
+
+// mat-nav-list span {
+//   color: #71071D;
+// }
